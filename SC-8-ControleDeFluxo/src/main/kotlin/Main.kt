@@ -34,6 +34,42 @@ fun mensalidadeCurso(curso: String): Double {
     return mensalidade
 }
 
+fun bonus(cargo: String): Float {
+    return when(cargo) {
+        "Gerente" -> {
+            2000F
+        }
+        "Coordenador" -> {
+            1500F
+        }
+        "Engenheiro de Software" -> {
+            1000F
+        }
+        "Estagiario" -> {
+            500F
+        }
+        else -> {
+            0F
+        }
+    }
+}
+
+fun whenExemplo(num: Int){
+
+    when(num) {
+        1 -> {
+            println("Valor é 1")
+        }
+        in 2..9 -> {
+            println("Valor está entre 2 e 9")
+        }
+        else -> {
+
+        }
+    }
+}
+
+
 fun main() {
 
     ehManha(true)
@@ -51,6 +87,63 @@ fun main() {
     println(mensalidadeCurso("geografia"))
     println(mensalidadeCurso("direito"))
 
+    println(bonus("Estagiario"))
+    whenExemplo(7)
 
+    for(i in 0 .. 20 step 5){
+        print("$i ")
+    }
+
+    println(" ")
+
+    for(i in 20 downTo 0 step 5){
+        print("$i ")
+    }
+
+    println(" ")
+
+    for(i in 0 .. 20){
+
+        if(i == 5){
+            // break
+            continue
+        }
+
+        print("$i")
+    }
+
+    println(" ")
+
+    for(i in 0 .. 20){
+        for(j in 0 .. 5){
+           if(j == 1){
+               break
+           }
+        }
+
+        println()
+        print("i:  $i")
+    }
+
+    println(" ")
+
+    val str2 = "Programação Kotlin!"
+    for(j in str2){
+        print(j)
+    }
+
+    var indice = 0
+
+    while(indice < 10){
+        println("$indice: olá while")
+        indice++
+    }
+
+    var index = 0
+
+    do{
+        println("$index: olá dowhile")
+        index++
+    }while(index < 10)
 }
 
