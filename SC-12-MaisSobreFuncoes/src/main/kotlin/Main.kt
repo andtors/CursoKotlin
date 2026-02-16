@@ -16,7 +16,7 @@ fun calculaJuros(): Nothing{
     throw Exception()
 }
 
-fun anyExemplo( vararg abc: Any) : Float {
+fun anyExemplo(vararg abc: Any): Any {
     var soma = 0F
     for(i in abc){
         when(i) {
@@ -28,14 +28,14 @@ fun anyExemplo( vararg abc: Any) : Float {
         }
     }
 
-    return abc.size
+    return abc
 }
 
 fun main(){
-    endereco("rua", estado = "estado", cidade = "cidade")
+    println(endereco("rua", estado = "estado", cidade = "cidade"))
 
-    media( 8F, 10F, 5F, 5F, 6F, 78F)
+    println(media( 8F, 10F, 5F, 5F, 6F, 78F))
 
-    anyExemplo( 8F, 10F, 5F, 5F, 6F, 78F, "", false, 5, 'd')
+    println(anyExemplo( 8F, 10F, 5F, 5F, 6F, 78F, "", false, 5, 'd'))
 
 }
